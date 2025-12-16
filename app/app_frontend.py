@@ -84,7 +84,7 @@ st.markdown(
     }
 
     .stTextArea > div > div > textarea {
-        background-color: #252525;
+        background-color: #3b3a3a;
         color: #e0e0e0;
         border: 1px solid #088f8f;
         border-radius: 10px;
@@ -143,7 +143,7 @@ st.markdown('<p class="subtitle">Quickly determine the domain of any news articl
 
 st.markdown(f'<div style="text-align: center; margin: 1rem 0;"><span class="accuracy-badge">Model Accuracy: {MODEL_ACCURACY:.2f}%</span></div>', unsafe_allow_html=True)
 
-st.markdown("---")
+st.markdown("<br>", unsafe_allow_html=True)
 
 user_input = st.text_area(
     "📝 Enter your news text here:",
@@ -183,6 +183,11 @@ if st.button("🔮 Predict Domain", type="primary", use_container_width=True):
 
                 st.markdown("### 📊 All Domain Probabilities")
                 st.dataframe(prob_df, use_container_width=True, hide_index=True)
-
+st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("---")
-st.caption("Built using Streamlit")
+st.markdown(
+    '<p style="text-align: center; color: #666666; font-size: 0.75rem;">'
+    '🚀 News Domain Classifier • Built with Streamlit • Model: LinearSVC + TF-IDF'
+    '</p>',
+    unsafe_allow_html=True
+)
