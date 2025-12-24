@@ -116,7 +116,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-MODEL_ACCURACY = 85.74
+MODEL_ACCURACY = 85.69
 
 @st.cache_resource
 def load_model():
